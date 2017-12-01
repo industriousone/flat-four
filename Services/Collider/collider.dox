@@ -1,0 +1,15 @@
+/**
+
+@defgroup f4_collide Collision Detection
+
+The following tests are implemented:
+@code
+         Sphere  Plane  Box  Capsule  Mesh       
+Sphere     Y       Y     Y      Y      Y
+Plane      Y       Y     Y      Y      -
+Box        Y       Y     Y      Y      -
+Capsule    Y       Y     Y      Y      -
+Mesh       Y       -     -      -      -
+@endcode
+
+*/

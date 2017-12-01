@@ -1,0 +1,184 @@
+/**
+@page b_scene_tut F4 Scene Manager Tutorial
+
+Before I start, let me point out that use of the F4 scene manager is
+completely optional. This manager may be overkill for some projects,
+and not efficient enough for others. You may always access the low
+level services directly.
+
+The scene manager uses an <I>Entity/Attribute</I> architecture. A scene is
+built out of @a entities. An Entity is a generic object, whose sole purpose
+is contain a list of @a attributes. The attributes, taken together, constitute
+what the entity is and what it does. 
+
+The following code, taken from the @c Scene01 sample, shows how to create
+a simple entity:
+
+@code
+	-- Start by creating a visual to represent my entity. For this
+	-- example I'll just use a simple textured cube
+	local cube   = StdLib.Cube(1, 1, 1)
+
+	local shader = Render.Shader()
+	shader.texture = io:fromFile("Data/moon.png")
+
+	local visual = Render.Visual(cube, shader)
+
+	-- Putting it into a Body allows me to attach it to the entity
+	local body = Scene.Body()
+	body:addVisual(visual)
+
+	-- Finally, assemble the entity. Note that the Pose must appear before any
+	-- attributes that it is to effect, so it usually should be first.
+	self.entity = Scene.Entity("MyEntity")
+	self.entity:addAttribute(body)
+@endcode
+
+This entity has only one attribute, a @a Body, which provides a visual
+representation of the entity.
+
+As a rule of thumb, you should not add an attribute to more than one entity. Most
+of the standard scene attributes cache data particular to their parent entity,
+and will not work properly with multiple parents.
+
+
+
+@subsection b_ scene_tut_makeitgo Making Things Go
+
+In order to view the scene, you must first create and initialize a Camera.
+Then you call render() on the root entity of your scene, passing it a
+RenderContext.
+
+@code
+	function App:initialize()
+		local camera = Scene.PerspectiveCamera()
+		camera:setPosition(0, 0, 0)
+
+		self.rc = Scene.RenderContext()
+		self.rc:setCamera(camera)
+	end
+
+	function App:onTimeEvent(event)
+		self.rc:prepare()
+		self.entity:render(self.rc)
+		self.rc:finish()
+	end
+@code
+
+The Camera object should be fairly self explanatory. The RenderContext
+manages the rendering pass over the entity tree. There are other contexts
+as well, UpdateContext for an update pass, and CollisionContext for
+collision detection. A complete game loop might look like this:
+
+@code
+	function App:initialize()
+		self.rc = Scene.RenderContext()
+		self.uc = Scene.UpdateContext()
+		self.cc = Scene.CollisionContext()
+	
+		local camera = Scene.PerspectiveCamera()
+		self.rc:setCamera(camera)
+
+		-- load/create the entity tree
+		self.rootEntity = ...
+	end
+
+	function App:onTimeEvent(event)
+		self.uc:prepare(event.elapsed)
+		self.rootEntity:update(self.uc)
+		self.uc:finish()
+
+		self.rc:prepare()
+		self.rootEntity:render(self.rc)
+		self.rc:finish()
+
+		self.cc:prepare()
+		self.rootEntity:collide(self.cc)
+		self.cc:finish()
+	end
+
+@endcode
+
+
+@subsection b_scene_tut_moreattr More Attributes
+
+You can specify a position and orientation for the entity by adding a Pose
+attribute:
+
+@code
+	local pose = Scene.Pose()
+	pose:setPosition(10, 10, 0)
+	self.entity:addAttribute(pose)
+@endcode
+
+Remember that each entity processes it's attributes in order, and addAttribute()
+adds to the end of that list. So this code:
+
+@code
+	entity:addAttribute(body)
+	entity:addAttribute(pose)
+@endcode
+
+...results in the body <I>not</I> being transformed, since it appears before
+the pose. If want the body to follow the entity around (most likely you do),
+the correct code is:
+
+@code
+	entity:addAttribute(pose)
+	entity:addAttribute(body)
+@endcode
+
+Most of the time, you'll want the pose to be the first attribute.
+
+Cameras are also attributes. When you add a camera to an entity (after the pose!),
+it will become attached to that entity. If you specify a position or orientation
+for the camera, it will become relative to the position and orientation of the
+entity itself.
+
+The Physics attribute provides rigid body simulation, including collision
+response, to an entity. It works as a drop-in replacement for Pose, and 
+automatically updates itself according to the physical properties which
+you set. 
+
+@code
+	local pose = Scene.Physics()
+	pose.body.mass = 10
+	pose:setPosition(10, 10, 0)
+
+	entity:addAttribute(pose)
+@endcode
+
+The Surface attribute provides a collision detection volume and collision
+response parameters. Use this attribute for anything that may be collided
+with.
+
+@code
+	local surf = Scene.Surface()
+	surf:addBoundingShape(Collider.BoundingSphere(1))
+	
+	local response = Physics.ContactPhysics()
+	response.friction = 0
+	response.restitution = 0.5
+	surf:setContactPhysics(response)
+@endcode
+
+
+
+@ subsection b_scene_tut Hier Building Object Hierarchies
+
+For anything other than the simplest applications, you'll need a way to 
+organize multiple entities. For this, you use the @a Space attributes.
+A space is able to store and organize entities, and provides a method
+for building a hierarchy of objects. For scenes with just a few objects,
+a SimpleSpace is your best choice; it performs no spatial organization
+and is relatively lightweight.
+
+<I>(Actually, SimpleSpace is your only choice at the moment. I hope to
+soon add quadtree and octree spaces, and eventually a portal to join
+spaces together.)</I>
+
+The Space, Physics, and Surface attributes are demonstrated in the 
+@c scene02.lua samples.
+
+
+*/

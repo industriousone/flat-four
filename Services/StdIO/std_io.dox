@@ -1,0 +1,21 @@
+/**
+
+@defgroup f4_stdio Standard ReaderWriter Library
+
+
+ <B>Requires:</B> IO, Render
+
+ The standard I/O package contains ReaderWriter services for a bunch of
+ common file formats. Including:
+
+ - <I>Images:</I> PNG, TGA, BMP
+ - <I>Fonts:</I> 4FNT
+
+ You can register all of these services in one shot by creating an
+ instance of the registration service:
+
+ @code
+ StdIO.Registration()
+ @endcode
+
+*/

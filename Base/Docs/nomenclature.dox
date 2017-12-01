@@ -1,0 +1,14 @@
+/**
+@page b_nomen Flat Four Engine Nomenclature
+
+<I>(in progress)</I>
+
+A <I>service</I> is the F4 nomenclature for a "component" or "plugin". It is a
+chunk of code that provides a service for the rest of the engine to use, hence
+the name. Services may be written in either C++ or script. Nearly everything in
+F4 is a service.
+
+A <I>package</I> is a collection of services. C++ services are packaged into a
+DLL, script services are packaged into a directory (or, eventually, a .ZIP archive).
+
+*/

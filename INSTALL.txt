@@ -1,0 +1,46 @@
+BUILDING AND INSTALLING
+
+This is the "quick and dirty" install guide. For more detailed
+instructions, see the HTML documentation, which is located in 
+the F4/Docs directory. You may download the HTML documentation 
+as a separate package, or autogenerate it by running Doxygen 
+(http://www.doxygen.org/) in F4/Base/Docs. 
+
+                           ---
+
+The current build of the F4 Engine requires SDL, which can be
+found at http://www.libsdl.org/. You must build or download the
+DLL version of SDL, and it should be in an accessible directory
+(either on the system search path or in the F4/Bin directory).
+You will also need the SDL development libraries (F4 needs the
+headers to build, but doesn't use the libraries otherwise).
+
+                           ---
+
+WIN32/MSVC++ INSTRUCTIONS
+
+Open F4/Build/F4.dsw and build.
+
+                           ---
+
+GNU C++ INSTRUCTIONS
+
+'cd F4/Build; make'
+
+The make scripts are not yet complete. In particular there is no
+dependency checking so if you start editing the header files the
+changes may not get picked up. The scripts also assume that SDL
+headers and libraries will be located in the system directories
+(/usr/include, /usr/lib), which is where the RPM installs will
+place them. 
+
+                           ---
+
+TESTING THE BUILD
+
+Win32: cd F4\Samples
+       ..\Bin\f4 boxes.lua
+
+Linux: cd F4/Bin
+       ../Bin/f4 boxes.lua
+

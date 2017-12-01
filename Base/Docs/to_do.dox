@@ -1,0 +1,36 @@
+/**
+ *
+ * @todo Add a @license field to every file, with appropriate license description.
+ *       Note the multiple licenses in the docs and website, explain the usage
+ *       implications.
+ *
+ * @todo The scene traversal mechanism is too rigid, should allow custom
+ *       traversals without having to add code to the Entity and Space classes.
+ *       This would probably fall out of a tool integration effort.
+ *
+ * @todo The core and script services are too closely tied together. Should
+ *       have a standalone ABI that allows introspection.
+ *
+ * @todo The current Service interface implementation and inheritance scheme
+ *       feels wrong. There should be a more capable method of defining new
+ *       engine services.
+ *
+ * @todo Having to write wrappers for every new service sucks. It should be
+ *       automatic or transparent.
+ *
+ * @todo Need to get educated in tool integration. Not sure if current design
+ *       will allow integration into content development environment.
+ *
+ * @todo Need a way to internationalize packages. Pull in resources from IBM's
+ *       ICU project, new string object, etc. UnrealTech has a good article
+ *       about this as well.
+ *
+ * @todo All packages must be in the f4 namespace or they won't build. Packages
+ *       should be able to use own namespace. Otherwise, consider ditching the
+ *       namespace altogether.
+ *
+ * @todo Is it possible to add a talkback style crash reporting system a la
+ *       Mozilla? Not for the engine itself, rather for applications built on
+ *       the engine. An online update facility would be nice as well.
+ *
+ */

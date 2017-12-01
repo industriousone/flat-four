@@ -1,0 +1,15 @@
+/**
+
+@defgroup f4_system System Services
+
+ The @a System services provide an abstraction of the underlying OS. It 
+ allows the game to create a window, receive events, process user input,
+ and access the system timer. 
+
+ The SDL version of this package requires the SDL library, available from
+ http://www.libsdl.org/. SDL must be built as a shared library and placed
+ either on the system search path or in your application directory. SDL
+ version 1.2 or later is recommended, but I believe that earlier versions
+ may be used as well (not tested).
+
+*/

@@ -1,0 +1,6 @@
+/**
+@defgroup f4_physics Physics
+
+	Rigid body dynamics and collision response.
+
+*/

@@ -1,0 +1,7 @@
+/**
+@defgroup f4_stdlib Standard Library of Useful Things
+
+
+ <B>Requires:</B> IO, Render
+
+*/

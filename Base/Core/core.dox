@@ -1,0 +1,7 @@
+/**
+
+@defgroup f4_core Core Engine Services
+
+ The @a Core services provide the foundation for the engine to build upon.
+
+*/

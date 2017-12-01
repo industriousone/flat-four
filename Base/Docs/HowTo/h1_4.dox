@@ -1,0 +1,15 @@
+/**
+@page H1_4 H1.4: Create a new script package
+
+A script package is simply a disk directory containing script files, one
+file per service. The name of the directory is the name of the package,
+and each file is named for the service it contains. So "MyPackage.MyService"
+would be <CODE>MyPackage/MyService.lua</CODE> (assuming the Lua script engine
+is in use).
+
+Once support for folded file systems is added to the engine, it will be
+possible to pack up the directory into a .zip file or similar for easy
+distribution.
+
+
+*/

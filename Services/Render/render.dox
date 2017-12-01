@@ -1,0 +1,9 @@
+/**
+
+@defgroup f4_render Rendering Services
+
+ The @a Render service abstracts the underlying 3D API.
+
+ <B>Requires:</B> DisplayEvent (System)
+
+*/

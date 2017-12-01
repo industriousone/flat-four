@@ -1,0 +1,15 @@
+/**
+
+@defgroup f4_text Font and Text Services
+
+Text rendering services.
+
+Requires: render, IO
+
+The text package introduces the .4FNT file type, which is a simple format for
+storing texture fonts. It includes a header describing the contained glyphs and
+their position on the texture, followed by the texture itself stored in .PNG
+format. The @c StdIO package includes a ReaderWriter for the format, see the
+demo @c F4/Samples/fontfactory.lua for an example of it's use.
+
+*/

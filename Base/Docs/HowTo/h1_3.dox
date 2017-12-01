@@ -1,0 +1,25 @@
+/**
+@page H1_3 H1.3: Create a new C++ package (DLL/.so)
+
+F4 C++ services are packaged together into DLLs. These instructions 
+will help you create a new package named "MyPackage". Obviously you
+should substitute a more meaningful name.
+
+- Create a directory named @a MyPackage in @c F4/Services
+
+- Create a new MSVC++ project by copying @c F4/Services/template.dsp
+  into the new directory and renaming it to "MyPackage.dsp". Open it
+  in a text editor and replace all occurrances of "{Service}" with
+  "MyPackage". Save and close the file.
+  
+- Open the F4 workspace in MSVC++ and choose "Project | Insert Project
+  Into Workspace". Add @c MyPackage.dsp, as a dependency of "Shell".
+  
+- Create a GNU make script by copying the *.mk file from one of the
+  other services directories (like Collider) and renaming it "mypackage.mk". 
+  Fill in the details for your project. Open @c F4/Build/Makefile and add a 
+  new line to USER_TARGETS for @c Services/MyPackage/mypackage.mk.
+
+*/
+
+

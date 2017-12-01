@@ -1,0 +1,9 @@
+/**
+ 
+@defgroup f4_script Scripting Services
+
+ A generic interface to a scripting system, intended for use by the
+ core engine services. In general you should not be using these
+ interfaces directly; rather use the calls supplied in CoreService.
+ 
+*/

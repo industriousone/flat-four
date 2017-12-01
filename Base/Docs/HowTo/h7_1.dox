@@ -1,0 +1,70 @@
+/**
+@page H7_1 H7.1: Read in a file?
+
+You'll need a reference to IOService to work with files:
+@code
+	(C++) IOService* io = (IOService*)Core->createA("IO.IOService");
+	(Lua) io = IO.IOService()
+@endcode
+
+
+If a ReaderWriter exists for the file format, you can load it into
+an appropriate Service object using IOService::fromFile(). For example,
+to load a PNG image to a Texture object, you would do:
+@code
+	(C++) Ref<Texture> t = (Texture*)io->fromFile("texture.png");
+	(Lua) local t = io:fromFile("texture.png")
+@endcode
+
+
+fromFile() will return @c NULL if the file could not be loaded. The
+file extension, in this case ".png", is used to determine the format
+of the file and locate an appropriate ReaderWriter.
+
+For more direct access to a file's contents, you create an InputStream:
+@code
+	(C++) Ref<InputStream> s = io->createInputStream("file.dat");
+	(Lua) local s = io:createInputStream("file.dat") 
+@endcode
+
+
+You can read services from the stream with IOService::fromStream(), which
+works just like fromFile(), except that must explicitly provide the data
+format.
+@code
+	(C++) Ref<Texture> t = (Texture*)io->fromStream(s, "png");
+	(Lua) local t = io:fromStream(s, "png")
+@endcode
+
+
+Read raw bytes from the stream with the read() function:
+@code
+	UInt8 buffer[50];
+	s->read(buffer, 50);
+@endcode
+
+<I>(Lua doesn't have the concept of a buffer yet, I'll get to that shortly)</I>
+
+
+InputStream supports higher-level primitives as well:
+@code
+	// C++
+	s->setByteOrder(InputStream::LSB);
+	UInt32 i = s->readInt32();
+	Float  f = s->readFloat();
+
+	Vector3 vecs[32];
+	s->readVectors(vecs, 32);
+
+	-- Lua
+	s:setByteOrder(s.LSB)
+	local i = s:readInt32()
+	local f = f:readFloat()
+
+	local vec = Vector()  -- array types will be added soon, but not there yet
+	s:readVector(vec, 1)
+@endcode
+
+<B>For more information:</B> IOService, InputStream
+
+*/

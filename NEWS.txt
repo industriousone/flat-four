@@ -1,0 +1,15 @@
+Version 0.3.2 (XX-XXX-2002)
+----------------------------
+
+Implemented a Visitor pattern to traverse the scene entity tree.
+Reworked the existing passes to use the new pattern.
+
+Collision detection now only tests surfaces that have moved 
+since the last frame.
+
+Added Shader::setTextureStyle().
+
+Added a matrix->quaternion conversion function.
+
+The usual assortment of bug fixes, particularly in the rendering
+and scene packages.

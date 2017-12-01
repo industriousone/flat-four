@@ -1,0 +1,12 @@
+/**
+@defgroup f4_platform Platform Abstraction
+
+ The Platform library hides the underlying operating system, allowing
+ the same code to run on multiple platforms. 
+*/
+
+
+/**
+@defgroup f4_platform_msg Text Messaging
+@ingroup f4_platform
+*/

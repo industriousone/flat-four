@@ -1,0 +1,44 @@
+/**
+
+@defgroup f4_memory Memory Manager
+
+ F4 provides a custom memory manager that must be used by all engine
+ C++ code. This manager provides two important functions:
+ <UL>
+ <LI>
+	<I>Pooled allocations.</I> The component-based architecture chosen
+	for F4 requires many, potentially small, memory allocations
+	and deallocations. Using the standard C memory manager, this usage
+	pattern tends to be slow, especially as memory becomes fragmented.
+	The F4 memory manager helps counteract this by pooling same-sized 
+	allocations together into larger pages. 
+	<P>
+ </LI><LI>
+	<I>Error checking.</I> In debug builds, the memory manager helps
+	detect common memory errors:
+	<UL>
+		<LI>memory leaks</LI>
+		<LI>use of uninitialized memory</LI>
+		<LI>use of deleted memory</LI>
+		<LI>over- and under-writes <I>(not yet implemented)</I></LI>
+		<LI>allocator/deallocator mismatches</LI>
+	</UL><P>
+ </LI></UL>
+ 	
+ To help use this information, the manager provides a number of
+ breakpoint functions that allow program execution to be stopped
+ when a particular memory operation is performed. Finally, the
+ manager prints a detailed usage report when the program exits.
+
+ Using the new memory manager is easy: include <Memory/memory.h>
+ at the top of your file (more on this below), and then use
+ the traditional C/C++ allocators as usual: @c new, @c delete,
+ @c new[], @c delete[], @c malloc, @c calloc, and @c realloc.
+
+ Because <memory.h> tries to redefine the standard memory operators,
+ it can conflict with other headers which try to do the same thing.
+ Your best bet is to include <memory.h> last whenever possible. If
+ necessary, you may include <Memory/undef.h>, which will remove
+ the macros.
+
+*/

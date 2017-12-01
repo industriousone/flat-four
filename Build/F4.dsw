@@ -1,0 +1,269 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "ColliderODE"=..\Services\Collider\ColliderODE.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Core"=..\Base\Core\Core.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Memory
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Docs"=..\Base\Docs\Docs.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "IO"=..\Services\IO\IO.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Platform
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Math"=..\Base\Math\Math.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Memory"=..\Base\Memory\Memory.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "PhysicsODE"=..\Services\Physics\PhysicsODE.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Platform"=..\Base\Platform\Platform.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "RenderGL"=..\Services\Render\RenderGL.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Samples"=.\Samples.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Scene"=..\Services\Scene\Scene.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Script"=..\Base\Script\Script.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Math
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Shell"=..\Base\Shell\Shell.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name Platform
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Core
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Script
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Math
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name SystemSDL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name RenderGL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name StdIO
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name IO
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ColliderODE
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Text
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name StdLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name PhysicsODE
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name Scene
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "StdIO"=..\Services\StdIO\StdIO.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "StdLib"=..\Services\StdLib\StdLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "SystemSDL"=..\Services\System\SystemSDL.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Text"=..\Services\Text\Text.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

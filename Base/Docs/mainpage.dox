@@ -1,0 +1,61 @@
+/**
+
+@mainpage Flat Four Engine
+
+<HR><P>
+
+@subsection main_start Getting Started
+
+@ref install<BR>
+Getting, building, and installing the Flat Four Engine.
+<P>
+
+@ref basics<BR>
+An introduction to the engine and it's component-based architecture.
+<P>
+
+@ref howto<BR>
+A task-oriented guide to everything you ever wanted to know about
+the Flat Four engine. If the answer to your question isn't here, 
+<A href="mailto:jason@379.com">let me know</A> and I'll add it.
+<P>
+
+@ref tech<BR>
+Background information on the engine architecture and how it got to
+be the way it is.
+
+
+
+<HR><P>
+
+
+
+
+@subsection main_api API Documentation
+
+	<A href="modules.html">Modules</A><BR>
+	<A href="hierarchy.html">Class Hierarchy</A><BR>
+	<A href="annotated.html">Compound List</A><BR>
+	<A href="files.html">File List</A><BR>
+	<A href="functions.html">Compound Members</A><BR>
+	<A href="globals.html">File Members</A><BR>
+	<A href="todo.html">To Do List</A><BR>
+
+
+<HR><P>
+
+
+
+@subsection main_credits Credits
+
+Thanks and appreciation go out to the authors of the following packages:
+
+ <A href="http://www.doxygen.org/">Doxygen</A> - 
+ <A href="http://www.freetype.org/">FreeType</A> -
+ <A href="http://www.libpng.org/">libPNG</A> - 
+ <A href="http://www.lua.org/">Lua</A> -
+ <A href="http://www.q12.org/ode/ode.html">ODE</A> -
+ <A href="http://www.libsdl.org/">SDL</A> -
+ <A href="http://www.gzip.org/zlib/">zlib</A>
+
+*/

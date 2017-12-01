@@ -1,0 +1,8 @@
+/**
+@defgroup f4_scene Scene Mangement
+
+	A scene level entity manager.
+
+	For an introduction to the scene API, see @ref b_scene_tut
+
+*/

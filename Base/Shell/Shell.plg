@@ -1,0 +1,957 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Platform - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSPF3B5.TMP" with contents
+[
+/nologo /MD /W3 /GX /O1 /I ".." /D "NDEBUG" /D PLATFORM_API=F4_EXPORT /D "WIN32" /D "_MBCS" /D "_LIB" /Fp"../../Build/Release_Platform/Platform.pch" /YX /Fo"../../Build/Release_Platform/" /Fd"../../Build/Release_Platform/" /FD /c 
+"C:\379\F4\Base\Platform\Src\Win32\directory.cpp"
+"C:\379\F4\Base\Platform\Src\Win32\file.cpp"
+"C:\379\F4\Base\Platform\Src\Win32\library.cpp"
+"C:\379\F4\Base\Platform\Src\Win32\print_alert.cpp"
+"C:\379\F4\Base\Platform\Src\Win32\print_debug.cpp"
+"C:\379\F4\Base\Platform\Src\Win32\string.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPF3B5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPF3B6.TMP" with contents
+[
+/nologo /out:"../Lib\Platform.lib" 
+\379\F4\Build\Release_Platform\directory.obj
+\379\F4\Build\Release_Platform\file.obj
+\379\F4\Build\Release_Platform\library.obj
+\379\F4\Build\Release_Platform\print_alert.obj
+\379\F4\Build\Release_Platform\print_debug.obj
+\379\F4\Build\Release_Platform\string.obj
+]
+Creating command line "link.exe -lib @C:\WINDOWS\TEMP\RSPF3B6.TMP"
+<h3>Output Window</h3>
+Compiling...
+directory.cpp
+file.cpp
+library.cpp
+print_alert.cpp
+print_debug.cpp
+string.cpp
+Creating library...
+<h3>
+--------------------Configuration: Memory - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP74.TMP" with contents
+[
+/nologo /MD /W3 /GX /O2 /I ".." /D MEMORY_API=F4_EXPORT /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_Memory/Memory.pch" /YX /Fo"../../Build/Release_Memory/" /Fd"../../Build/Release_Memory/" /FD /c 
+"C:\379\F4\Base\Memory\Src\memory.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP74.TMP" 
+Creating command line "link.exe platform.lib /nologo /dll /incremental:no /pdb:"../Lib/memory.pdb" /machine:I386 /out:"../../Bin/Memory.dll" /implib:"../Lib/memory.lib" /libpath:"../Lib"  \379\F4\Build\Release_Memory\memory.obj "
+<h3>Output Window</h3>
+Compiling...
+memory.cpp
+Linking...
+   Creating library ../Lib/memory.lib and object ../Lib/memory.exp
+<h3>
+--------------------Configuration: Core - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP94.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I ".." /D "NDEBUG" /D CORE_API=F4_EXPORT /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_Core/Core.pch" /YX /Fo"../../Build/Release_Core/" /Fd"../../Build/Release_Core/" /FD /c 
+"C:\379\F4\Base\Core\Src\core.cpp"
+"C:\379\F4\Base\Core\Src\event.cpp"
+"C:\379\F4\Base\Core\Src\event_listener.cpp"
+"C:\379\F4\Base\Core\Src\exports.cpp"
+"C:\379\F4\Base\Core\Src\service.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP94.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP0095.TMP" with contents
+[
+platform.lib memory.lib user32.lib /nologo /dll /incremental:no /pdb:"../Lib/core.pdb" /machine:I386 /out:"../../Bin/Core.dll" /implib:"../Lib/core.lib" /libpath:"../Lib" 
+\379\F4\Build\Release_Core\core.obj
+\379\F4\Build\Release_Core\event.obj
+\379\F4\Build\Release_Core\event_listener.obj
+\379\F4\Build\Release_Core\exports.obj
+\379\F4\Build\Release_Core\service.obj
+\379\F4\Base\Lib\memory.lib
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP0095.TMP"
+<h3>Output Window</h3>
+Compiling...
+core.cpp
+event.cpp
+event_listener.cpp
+exports.cpp
+service.cpp
+Linking...
+   Creating library ../Lib/core.lib and object ../Lib/core.exp
+<h3>
+--------------------Configuration: Math - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP151.TMP" with contents
+[
+/nologo /MD /W3 /GX /O2 /I ".." /D "NDEBUG" /D MATH_API=F4_EXPORT /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_Math/Math.pch" /YX /Fo"../../Build/Release_Math/" /Fd"../../Build/Release_Math/" /FD /c 
+"C:\379\F4\Base\Math\Src\matrix.cpp"
+"C:\379\F4\Base\Math\Src\quaternion.cpp"
+"C:\379\F4\Base\Math\Src\vector.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP151.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP0152.TMP" with contents
+[
+platform.lib /nologo /dll /incremental:no /pdb:"../Lib/math.pdb" /machine:I386 /out:"../../Bin/Math.dll" /implib:"../Lib/math.lib" /libpath:"../Lib" 
+\379\F4\Build\Release_Math\matrix.obj
+\379\F4\Build\Release_Math\quaternion.obj
+\379\F4\Build\Release_Math\vector.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP0152.TMP"
+<h3>Output Window</h3>
+Compiling...
+matrix.cpp
+quaternion.cpp
+vector.cpp
+Linking...
+   Creating library ../Lib/math.lib and object ../Lib/math.exp
+<h3>
+--------------------Configuration: Script - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP1B4.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I ".." /I "./Src/Lua/Lua/include" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_Script/Script.pch" /YX /Fo"../../Build/Release_Script/" /Fd"../../Build/Release_Script/" /FD /c 
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lapi.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lib\lauxlib.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lib\lbaselib.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lcode.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\ldebug.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\ldo.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lfunc.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lgc.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\llex.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lib\lmathlib.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lmem.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lobject.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lopcodes.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lparser.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lstate.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lstring.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lib\lstrlib.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\ltable.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\ltests.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\ltm.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lundump.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lvm.c"
+"C:\379\F4\Base\Script\Src\Lua\Lua\src\lzio.c"
+"C:\379\F4\Base\Script\Src\Lua\context.cpp"
+"C:\379\F4\Base\Script\Src\Lua\extensions.cpp"
+"C:\379\F4\Base\Script\Src\Lua\matrix.cpp"
+"C:\379\F4\Base\Script\Src\Lua\quaternion.cpp"
+"C:\379\F4\Base\Script\Src\Lua\refs.cpp"
+"C:\379\F4\Base\Script\Src\Lua\script.cpp"
+"C:\379\F4\Base\Script\Src\Lua\thunks.cpp"
+"C:\379\F4\Base\Script\Src\Lua\vector.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1B4.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP01B5.TMP" with contents
+[
+core.lib memory.lib platform.lib math.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_Script/Script.pdb" /machine:I386 /out:"../../Bin/Script.dll" /implib:"../../Build/Release_Script/Script.lib" /libpath:"../Lib" 
+\379\F4\Build\Release_Script\lapi.obj
+\379\F4\Build\Release_Script\lauxlib.obj
+\379\F4\Build\Release_Script\lbaselib.obj
+\379\F4\Build\Release_Script\lcode.obj
+\379\F4\Build\Release_Script\ldebug.obj
+\379\F4\Build\Release_Script\ldo.obj
+\379\F4\Build\Release_Script\lfunc.obj
+\379\F4\Build\Release_Script\lgc.obj
+\379\F4\Build\Release_Script\llex.obj
+\379\F4\Build\Release_Script\lmathlib.obj
+\379\F4\Build\Release_Script\lmem.obj
+\379\F4\Build\Release_Script\lobject.obj
+\379\F4\Build\Release_Script\lopcodes.obj
+\379\F4\Build\Release_Script\lparser.obj
+\379\F4\Build\Release_Script\lstate.obj
+\379\F4\Build\Release_Script\lstring.obj
+\379\F4\Build\Release_Script\lstrlib.obj
+\379\F4\Build\Release_Script\ltable.obj
+\379\F4\Build\Release_Script\ltests.obj
+\379\F4\Build\Release_Script\ltm.obj
+\379\F4\Build\Release_Script\lundump.obj
+\379\F4\Build\Release_Script\lvm.obj
+\379\F4\Build\Release_Script\lzio.obj
+\379\F4\Build\Release_Script\context.obj
+\379\F4\Build\Release_Script\extensions.obj
+\379\F4\Build\Release_Script\matrix.obj
+\379\F4\Build\Release_Script\quaternion.obj
+\379\F4\Build\Release_Script\refs.obj
+\379\F4\Build\Release_Script\script.obj
+\379\F4\Build\Release_Script\thunks.obj
+\379\F4\Build\Release_Script\vector.obj
+\379\F4\Base\Lib\math.lib
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP01B5.TMP"
+<h3>Output Window</h3>
+Compiling...
+lapi.c
+lauxlib.c
+lbaselib.c
+lcode.c
+ldebug.c
+ldo.c
+lfunc.c
+lgc.c
+llex.c
+lmathlib.c
+lmem.c
+lobject.c
+lopcodes.c
+lparser.c
+lstate.c
+lstring.c
+lstrlib.c
+ltable.c
+ltests.c
+ltm.c
+lundump.c
+lvm.c
+lzio.c
+context.cpp
+extensions.cpp
+matrix.cpp
+quaternion.cpp
+refs.cpp
+script.cpp
+thunks.cpp
+vector.cpp
+Linking...
+   Creating library ../../Build/Release_Script/Script.lib and object ../../Build/Release_Script/Script.exp
+<h3>
+--------------------Configuration: SystemSDL - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP351.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_SystemSDL/SystemSDL.pch" /YX /Fo"../../Build/Release_SystemSDL/" /Fd"../../Build/Release_SystemSDL/" /FD /c 
+"C:\379\F4\Services\System\Src\axis_event.cpp"
+"C:\379\F4\Services\System\Src\button_event.cpp"
+"C:\379\F4\Services\System\Src\click_event.cpp"
+"C:\379\F4\Services\System\Src\display_event.cpp"
+"C:\379\F4\Services\System\Src\Sdl\event_loop.cpp"
+"C:\379\F4\Services\System\Src\exports.cpp"
+"C:\379\F4\Services\System\Src\key_event.cpp"
+"C:\379\F4\Services\System\Src\key_table.cpp"
+"C:\379\F4\Services\System\Src\motion_event.cpp"
+"C:\379\F4\Services\System\Src\Sdl\sdl_bindings.cpp"
+"C:\379\F4\Services\System\Src\Sdl\system.cpp"
+"C:\379\F4\Services\System\Src\time_event.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP351.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP0352.TMP" with contents
+[
+core.lib memory.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_SystemSDL/SystemSDL.pdb" /machine:I386 /out:"../../Bin/SystemSDL.dll" /implib:"../../Build/Release_SystemSDL/SystemSDL.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_SystemSDL\axis_event.obj
+\379\F4\Build\Release_SystemSDL\button_event.obj
+\379\F4\Build\Release_SystemSDL\click_event.obj
+\379\F4\Build\Release_SystemSDL\display_event.obj
+\379\F4\Build\Release_SystemSDL\event_loop.obj
+\379\F4\Build\Release_SystemSDL\exports.obj
+\379\F4\Build\Release_SystemSDL\key_event.obj
+\379\F4\Build\Release_SystemSDL\key_table.obj
+\379\F4\Build\Release_SystemSDL\motion_event.obj
+\379\F4\Build\Release_SystemSDL\sdl_bindings.obj
+\379\F4\Build\Release_SystemSDL\system.obj
+\379\F4\Build\Release_SystemSDL\time_event.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP0352.TMP"
+<h3>Output Window</h3>
+Compiling...
+axis_event.cpp
+button_event.cpp
+click_event.cpp
+display_event.cpp
+event_loop.cpp
+exports.cpp
+key_event.cpp
+key_table.cpp
+motion_event.cpp
+sdl_bindings.cpp
+system.cpp
+time_event.cpp
+Linking...
+   Creating library ../../Build/Release_SystemSDL/SystemSDL.lib and object ../../Build/Release_SystemSDL/SystemSDL.exp
+<h3>
+--------------------Configuration: RenderGL - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP10B3.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_RenderGL/RenderGL.pch" /YX /Fo"../../Build/Release_RenderGL/" /Fd"../../Build/Release_RenderGL/" /FD /c 
+"C:\379\F4\Services\Render\Src\exports.cpp"
+"C:\379\F4\Services\Render\Src\iterator.cpp"
+"C:\379\F4\Services\Render\Src\Gl\render.cpp"
+"C:\379\F4\Services\Render\Src\Gl\shader.cpp"
+"C:\379\F4\Services\Render\Src\Gl\sprite.cpp"
+"C:\379\F4\Services\Render\Src\Gl\texture.cpp"
+"C:\379\F4\Services\Render\Src\Gl\vb.cpp"
+"C:\379\F4\Services\Render\Src\visual.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP10B3.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP10B4.TMP" with contents
+[
+core.lib math.lib memory.lib platform.lib opengl32.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_RenderGL/RenderGL.pdb" /machine:I386 /out:"../../Bin/RenderGL.dll" /implib:"../../Build/Release_RenderGL/RenderGL.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_RenderGL\exports.obj
+\379\F4\Build\Release_RenderGL\iterator.obj
+\379\F4\Build\Release_RenderGL\render.obj
+\379\F4\Build\Release_RenderGL\shader.obj
+\379\F4\Build\Release_RenderGL\sprite.obj
+\379\F4\Build\Release_RenderGL\texture.obj
+\379\F4\Build\Release_RenderGL\vb.obj
+\379\F4\Build\Release_RenderGL\visual.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP10B4.TMP"
+<h3>Output Window</h3>
+Compiling...
+exports.cpp
+iterator.cpp
+render.cpp
+shader.cpp
+sprite.cpp
+texture.cpp
+vb.cpp
+visual.cpp
+Linking...
+   Creating library ../../Build/Release_RenderGL/RenderGL.lib and object ../../Build/Release_RenderGL/RenderGL.exp
+<h3>
+--------------------Configuration: StdIO - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP11A1.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /I "./Src" /I "./Src/libpng" /I "./Src/zlib" /I "./Src/lib3ds" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_StdIO/StdIO.pch" /YX /Fo"../../Build/Release_StdIO/" /Fd"../../Build/Release_StdIO/" /FD /c 
+"C:\379\F4\Services\StdIO\Src\exports.cpp"
+"C:\379\F4\Services\StdIO\Src\flt_zlib.cpp"
+"C:\379\F4\Services\StdIO\Src\register.cpp"
+"C:\379\F4\Services\StdIO\Src\rw_4fnt.cpp"
+"C:\379\F4\Services\StdIO\Src\rw_bmp.cpp"
+"C:\379\F4\Services\StdIO\Src\rw_obj.cpp"
+"C:\379\F4\Services\StdIO\Src\rw_png.cpp"
+"C:\379\F4\Services\StdIO\Src\rw_tga.cpp"
+"C:\379\F4\Services\StdIO\Src\libpng\png.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngerror.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngget.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngmem.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngpread.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngread.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngrio.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngrtran.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngrutil.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngset.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngtrans.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngwio.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngwrite.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngwtran.c"
+"C:\379\F4\Services\StdIO\Src\libpng\pngwutil.c"
+"C:\379\F4\Services\StdIO\Src\zlib\adler32.c"
+"C:\379\F4\Services\StdIO\Src\zlib\compress.c"
+"C:\379\F4\Services\StdIO\Src\zlib\crc32.c"
+"C:\379\F4\Services\StdIO\Src\zlib\deflate.c"
+"C:\379\F4\Services\StdIO\Src\zlib\gzio.c"
+"C:\379\F4\Services\StdIO\Src\zlib\infblock.c"
+"C:\379\F4\Services\StdIO\Src\zlib\infcodes.c"
+"C:\379\F4\Services\StdIO\Src\zlib\inffast.c"
+"C:\379\F4\Services\StdIO\Src\zlib\inflate.c"
+"C:\379\F4\Services\StdIO\Src\zlib\inftrees.c"
+"C:\379\F4\Services\StdIO\Src\zlib\infutil.c"
+"C:\379\F4\Services\StdIO\Src\zlib\trees.c"
+"C:\379\F4\Services\StdIO\Src\zlib\uncompr.c"
+"C:\379\F4\Services\StdIO\Src\zlib\zutil.c"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP11A1.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP11A2.TMP" with contents
+[
+core.lib memory.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_StdIO/StdIO.pdb" /machine:I386 /out:"../../Bin/StdIO.dll" /implib:"../../Build/Release_StdIO/StdIO.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_StdIO\exports.obj
+\379\F4\Build\Release_StdIO\flt_zlib.obj
+\379\F4\Build\Release_StdIO\register.obj
+\379\F4\Build\Release_StdIO\rw_4fnt.obj
+\379\F4\Build\Release_StdIO\rw_bmp.obj
+\379\F4\Build\Release_StdIO\rw_obj.obj
+\379\F4\Build\Release_StdIO\rw_png.obj
+\379\F4\Build\Release_StdIO\rw_tga.obj
+\379\F4\Build\Release_StdIO\png.obj
+\379\F4\Build\Release_StdIO\pngerror.obj
+\379\F4\Build\Release_StdIO\pngget.obj
+\379\F4\Build\Release_StdIO\pngmem.obj
+\379\F4\Build\Release_StdIO\pngpread.obj
+\379\F4\Build\Release_StdIO\pngread.obj
+\379\F4\Build\Release_StdIO\pngrio.obj
+\379\F4\Build\Release_StdIO\pngrtran.obj
+\379\F4\Build\Release_StdIO\pngrutil.obj
+\379\F4\Build\Release_StdIO\pngset.obj
+\379\F4\Build\Release_StdIO\pngtrans.obj
+\379\F4\Build\Release_StdIO\pngwio.obj
+\379\F4\Build\Release_StdIO\pngwrite.obj
+\379\F4\Build\Release_StdIO\pngwtran.obj
+\379\F4\Build\Release_StdIO\pngwutil.obj
+\379\F4\Build\Release_StdIO\adler32.obj
+\379\F4\Build\Release_StdIO\compress.obj
+\379\F4\Build\Release_StdIO\crc32.obj
+\379\F4\Build\Release_StdIO\deflate.obj
+\379\F4\Build\Release_StdIO\gzio.obj
+\379\F4\Build\Release_StdIO\infblock.obj
+\379\F4\Build\Release_StdIO\infcodes.obj
+\379\F4\Build\Release_StdIO\inffast.obj
+\379\F4\Build\Release_StdIO\inflate.obj
+\379\F4\Build\Release_StdIO\inftrees.obj
+\379\F4\Build\Release_StdIO\infutil.obj
+\379\F4\Build\Release_StdIO\trees.obj
+\379\F4\Build\Release_StdIO\uncompr.obj
+\379\F4\Build\Release_StdIO\zutil.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP11A2.TMP"
+<h3>Output Window</h3>
+Compiling...
+exports.cpp
+flt_zlib.cpp
+register.cpp
+rw_4fnt.cpp
+rw_bmp.cpp
+rw_obj.cpp
+rw_png.cpp
+rw_tga.cpp
+png.c
+pngerror.c
+pngget.c
+pngmem.c
+pngpread.c
+pngread.c
+pngrio.c
+pngrtran.c
+pngrutil.c
+pngset.c
+pngtrans.c
+pngwio.c
+pngwrite.c
+pngwtran.c
+pngwutil.c
+adler32.c
+compress.c
+crc32.c
+deflate.c
+gzio.c
+infblock.c
+infcodes.c
+inffast.c
+inflate.c
+inftrees.c
+infutil.c
+trees.c
+uncompr.c
+zutil.c
+Linking...
+   Creating library ../../Build/Release_StdIO/StdIO.lib and object ../../Build/Release_StdIO/StdIO.exp
+<h3>
+--------------------Configuration: IO - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP2010.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_IO/IO.pch" /YX /Fo"../../Build/Release_IO/" /Fd"../../Build/Release_IO/" /FD /c 
+"C:\379\F4\Services\IO\Src\disk_io.cpp"
+"C:\379\F4\Services\IO\Src\exports.cpp"
+"C:\379\F4\Services\IO\Src\input_stream.cpp"
+"C:\379\F4\Services\IO\Src\io.cpp"
+"C:\379\F4\Services\IO\Src\memory_io.cpp"
+"C:\379\F4\Services\IO\Src\output_stream.cpp"
+"C:\379\F4\Services\IO\Src\reader_writer.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP2010.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP2011.TMP" with contents
+[
+core.lib memory.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_IO/IO.pdb" /machine:I386 /out:"../../Bin/IO.dll" /implib:"../../Build/Release_IO/IO.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_IO\disk_io.obj
+\379\F4\Build\Release_IO\exports.obj
+\379\F4\Build\Release_IO\input_stream.obj
+\379\F4\Build\Release_IO\io.obj
+\379\F4\Build\Release_IO\memory_io.obj
+\379\F4\Build\Release_IO\output_stream.obj
+\379\F4\Build\Release_IO\reader_writer.obj
+\379\F4\Base\Lib\Platform.lib
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP2011.TMP"
+<h3>Output Window</h3>
+Compiling...
+disk_io.cpp
+exports.cpp
+input_stream.cpp
+io.cpp
+memory_io.cpp
+output_stream.cpp
+reader_writer.cpp
+Linking...
+   Creating library ../../Build/Release_IO/IO.lib and object ../../Build/Release_IO/IO.exp
+<h3>
+--------------------Configuration: ColliderODE - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP20F1.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /I "../Common/ODE/include" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_ColliderODE/ColliderODE.pch" /YX /Fo"../../Build/Release_ColliderODE/" /Fd"../../Build/Release_ColliderODE/" /FD /c 
+"C:\379\F4\Services\Common\Ode\src\array.cpp"
+"C:\379\F4\Services\Common\Ode\src\error.cpp"
+"C:\379\F4\Services\Common\Ode\src\fastdot.c"
+"C:\379\F4\Services\Common\Ode\src\fastldlt.c"
+"C:\379\F4\Services\Common\Ode\src\fastlsolve.c"
+"C:\379\F4\Services\Common\Ode\src\fastltsolve.c"
+"C:\379\F4\Services\Common\Ode\src\geom.cpp"
+"C:\379\F4\Services\Common\Ode\src\joint.cpp"
+"C:\379\F4\Services\Common\Ode\src\lcp.cpp"
+"C:\379\F4\Services\Common\Ode\src\mass.cpp"
+"C:\379\F4\Services\Common\Ode\src\mat.cpp"
+"C:\379\F4\Services\Common\Ode\src\matrix.cpp"
+"C:\379\F4\Services\Common\Ode\src\memory.cpp"
+"C:\379\F4\Services\Common\Ode\src\misc.cpp"
+"C:\379\F4\Services\Common\Ode\src\obstack.cpp"
+"C:\379\F4\Services\Common\Ode\src\ode.cpp"
+"C:\379\F4\Services\Common\Ode\src\odemath.cpp"
+"C:\379\F4\Services\Common\Ode\src\rotation.cpp"
+"C:\379\F4\Services\Common\Ode\src\space.cpp"
+"C:\379\F4\Services\Common\Ode\src\step.cpp"
+"C:\379\F4\Services\Common\Ode\src\testing.cpp"
+"C:\379\F4\Services\Common\Ode\src\timer.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\IceAABB.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\IceContainer.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\IceMatrix3x3.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\IceMatrix4x4.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\IcePoint.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\IceTriangle.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_AABBTree.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_Collider.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_Common.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_Model.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_OptimizedTree.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_RayCollider.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_SphereCollider.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_TreeBuilders.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\OPC_TreeCollider.cpp"
+"C:\379\F4\Services\Collider\Src\Opcode\Opcode.cpp"
+"C:\379\F4\Services\Collider\Src\Ode\box.cpp"
+"C:\379\F4\Services\Collider\Src\Ode\capsule.cpp"
+"C:\379\F4\Services\Collider\Src\Ode\collider.cpp"
+"C:\379\F4\Services\Collider\Src\contact_list.cpp"
+"C:\379\F4\Services\Collider\Src\exports.cpp"
+"C:\379\F4\Services\Collider\Src\mesh.cpp"
+"C:\379\F4\Services\Collider\Src\Ode\plane.cpp"
+"C:\379\F4\Services\Collider\Src\Ode\sphere.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP20F1.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP20F2.TMP" with contents
+[
+core.lib memory.lib math.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_ColliderODE/ColliderODE.pdb" /machine:I386 /out:"../../Bin/ColliderODE.dll" /implib:"../../Build/Release_ColliderODE/ColliderODE.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_ColliderODE\array.obj
+\379\F4\Build\Release_ColliderODE\error.obj
+\379\F4\Build\Release_ColliderODE\fastdot.obj
+\379\F4\Build\Release_ColliderODE\fastldlt.obj
+\379\F4\Build\Release_ColliderODE\fastlsolve.obj
+\379\F4\Build\Release_ColliderODE\fastltsolve.obj
+\379\F4\Build\Release_ColliderODE\geom.obj
+\379\F4\Build\Release_ColliderODE\joint.obj
+\379\F4\Build\Release_ColliderODE\lcp.obj
+\379\F4\Build\Release_ColliderODE\mass.obj
+\379\F4\Build\Release_ColliderODE\mat.obj
+\379\F4\Build\Release_ColliderODE\matrix.obj
+\379\F4\Build\Release_ColliderODE\memory.obj
+\379\F4\Build\Release_ColliderODE\misc.obj
+\379\F4\Build\Release_ColliderODE\obstack.obj
+\379\F4\Build\Release_ColliderODE\ode.obj
+\379\F4\Build\Release_ColliderODE\odemath.obj
+\379\F4\Build\Release_ColliderODE\rotation.obj
+\379\F4\Build\Release_ColliderODE\space.obj
+\379\F4\Build\Release_ColliderODE\step.obj
+\379\F4\Build\Release_ColliderODE\testing.obj
+\379\F4\Build\Release_ColliderODE\timer.obj
+\379\F4\Build\Release_ColliderODE\IceAABB.obj
+\379\F4\Build\Release_ColliderODE\IceContainer.obj
+\379\F4\Build\Release_ColliderODE\IceMatrix3x3.obj
+\379\F4\Build\Release_ColliderODE\IceMatrix4x4.obj
+\379\F4\Build\Release_ColliderODE\IcePoint.obj
+\379\F4\Build\Release_ColliderODE\IceTriangle.obj
+\379\F4\Build\Release_ColliderODE\OPC_AABBTree.obj
+\379\F4\Build\Release_ColliderODE\OPC_Collider.obj
+\379\F4\Build\Release_ColliderODE\OPC_Common.obj
+\379\F4\Build\Release_ColliderODE\OPC_Model.obj
+\379\F4\Build\Release_ColliderODE\OPC_OptimizedTree.obj
+\379\F4\Build\Release_ColliderODE\OPC_RayCollider.obj
+\379\F4\Build\Release_ColliderODE\OPC_SphereCollider.obj
+\379\F4\Build\Release_ColliderODE\OPC_TreeBuilders.obj
+\379\F4\Build\Release_ColliderODE\OPC_TreeCollider.obj
+\379\F4\Build\Release_ColliderODE\Opcode.obj
+\379\F4\Build\Release_ColliderODE\box.obj
+\379\F4\Build\Release_ColliderODE\capsule.obj
+\379\F4\Build\Release_ColliderODE\collider.obj
+\379\F4\Build\Release_ColliderODE\contact_list.obj
+\379\F4\Build\Release_ColliderODE\exports.obj
+\379\F4\Build\Release_ColliderODE\mesh.obj
+\379\F4\Build\Release_ColliderODE\plane.obj
+\379\F4\Build\Release_ColliderODE\sphere.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP20F2.TMP"
+<h3>Output Window</h3>
+Compiling...
+array.cpp
+error.cpp
+fastdot.c
+fastldlt.c
+fastlsolve.c
+fastltsolve.c
+geom.cpp
+C:\379\F4\Services\Common\Ode\src\geom.cpp(431) : warning C4291: 'void *__cdecl dArrayBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\array.h(64) : see declaration of 'new'
+C:\379\F4\Services\Common\Ode\src\geom.cpp(441) : warning C4291: 'void *__cdecl dArrayBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\array.h(64) : see declaration of 'new'
+joint.cpp
+lcp.cpp
+mass.cpp
+mat.cpp
+matrix.cpp
+memory.cpp
+misc.cpp
+obstack.cpp
+ode.cpp
+C:\379\F4\Services\Common\Ode\src\ode.cpp(332) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+C:\379\F4\Services\Common\Ode\src\ode.cpp(874) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+odemath.cpp
+rotation.cpp
+space.cpp
+C:\379\F4\Services\Common\Ode\src\space.cpp(126) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+C:\379\F4\Services\Common\Ode\src\space.cpp(327) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+step.cpp
+testing.cpp
+timer.cpp
+IceAABB.cpp
+IceContainer.cpp
+IceMatrix3x3.cpp
+IceMatrix4x4.cpp
+IcePoint.cpp
+IceTriangle.cpp
+OPC_AABBTree.cpp
+OPC_Collider.cpp
+OPC_Common.cpp
+OPC_Model.cpp
+OPC_OptimizedTree.cpp
+OPC_RayCollider.cpp
+OPC_SphereCollider.cpp
+OPC_TreeBuilders.cpp
+OPC_TreeCollider.cpp
+Opcode.cpp
+box.cpp
+capsule.cpp
+collider.cpp
+contact_list.cpp
+exports.cpp
+mesh.cpp
+plane.cpp
+sphere.cpp
+Linking...
+   Creating library ../../Build/Release_ColliderODE/ColliderODE.lib and object ../../Build/Release_ColliderODE/ColliderODE.exp
+<h3>
+--------------------Configuration: Text - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP3011.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "./FreeType/include" /I "../../Base" /I ".." /I "./Src/FreeType/include" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_Text/Text.pch" /YX /Fo"../../Build/Release_Text/" /Fd"../../Build/Release_Text/" /FD /c 
+"C:\379\F4\Services\Text\Src\FreeType\src\autohint\autohint.c"
+"C:\379\F4\Services\Text\Src\FreeType\src\base\ftbase.c"
+"C:\379\F4\Services\Text\Src\FreeType\src\base\ftglyph.c"
+"C:\379\F4\Services\Text\Src\FreeType\src\base\ftinit.c"
+"C:\379\F4\Services\Text\Src\FreeType\src\sfnt\sfnt.c"
+"C:\379\F4\Services\Text\Src\FreeType\src\smooth\smooth.c"
+"C:\379\F4\Services\Text\Src\FreeType\src\truetype\truetype.c"
+"C:\379\F4\Services\Text\Src\FreeType\src\type1\type1.c"
+"C:\379\F4\Services\Text\Src\exports.cpp"
+"C:\379\F4\Services\Text\Src\f4system.cpp"
+"C:\379\F4\Services\Text\Src\font_factory.cpp"
+"C:\379\F4\Services\Text\Src\texture_font.cpp"
+"C:\379\F4\Services\Text\Src\visual.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP3011.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP3012.TMP" with contents
+[
+core.lib memory.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_Text/Text.pdb" /machine:I386 /out:"../../Bin/Text.dll" /implib:"../../Build/Release_Text/Text.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_Text\autohint.obj
+\379\F4\Build\Release_Text\ftbase.obj
+\379\F4\Build\Release_Text\ftglyph.obj
+\379\F4\Build\Release_Text\ftinit.obj
+\379\F4\Build\Release_Text\sfnt.obj
+\379\F4\Build\Release_Text\smooth.obj
+\379\F4\Build\Release_Text\truetype.obj
+\379\F4\Build\Release_Text\type1.obj
+\379\F4\Build\Release_Text\exports.obj
+\379\F4\Build\Release_Text\f4system.obj
+\379\F4\Build\Release_Text\font_factory.obj
+\379\F4\Build\Release_Text\texture_font.obj
+\379\F4\Build\Release_Text\visual.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP3012.TMP"
+<h3>Output Window</h3>
+Compiling...
+autohint.c
+ftbase.c
+ftglyph.c
+ftinit.c
+sfnt.c
+smooth.c
+truetype.c
+type1.c
+exports.cpp
+f4system.cpp
+font_factory.cpp
+texture_font.cpp
+visual.cpp
+Linking...
+   Creating library ../../Build/Release_Text/Text.lib and object ../../Build/Release_Text/Text.exp
+<h3>
+--------------------Configuration: StdLib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP3154.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_StdLib/StdLib.pch" /YX /Fo"../../Build/Release_StdLib/" /Fd"../../Build/Release_StdLib/" /FD /c 
+"C:\379\F4\Services\StdLib\Src\Shapes\cube.cpp"
+"C:\379\F4\Services\StdLib\Src\action.cpp"
+"C:\379\F4\Services\StdLib\Src\action_mapper.cpp"
+"C:\379\F4\Services\StdLib\Src\curve.cpp"
+"C:\379\F4\Services\StdLib\Src\exports.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP3154.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP3155.TMP" with contents
+[
+core.lib math.lib memory.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_StdLib/StdLib.pdb" /machine:I386 /out:"../../Bin/StdLib.dll" /implib:"../../Build/Release_StdLib/StdLib.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_StdLib\cube.obj
+\379\F4\Build\Release_StdLib\action.obj
+\379\F4\Build\Release_StdLib\action_mapper.obj
+\379\F4\Build\Release_StdLib\curve.obj
+\379\F4\Build\Release_StdLib\exports.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP3155.TMP"
+<h3>Output Window</h3>
+Compiling...
+cube.cpp
+action.cpp
+action_mapper.cpp
+curve.cpp
+exports.cpp
+Linking...
+   Creating library ../../Build/Release_StdLib/StdLib.lib and object ../../Build/Release_StdLib/StdLib.exp
+<h3>
+--------------------Configuration: PhysicsODE - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP3202.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /I "../Common/ODE/include" /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_PhysicsODE/PhysicsODE.pch" /YX /Fo"../../Build/Release_PhysicsODE/" /Fd"../../Build/Release_PhysicsODE/" /FD /c 
+"C:\379\F4\Services\Common\Ode\src\array.cpp"
+"C:\379\F4\Services\Common\Ode\src\error.cpp"
+"C:\379\F4\Services\Common\Ode\src\fastdot.c"
+"C:\379\F4\Services\Common\Ode\src\fastldlt.c"
+"C:\379\F4\Services\Common\Ode\src\fastlsolve.c"
+"C:\379\F4\Services\Common\Ode\src\fastltsolve.c"
+"C:\379\F4\Services\Common\Ode\src\geom.cpp"
+"C:\379\F4\Services\Common\Ode\src\joint.cpp"
+"C:\379\F4\Services\Common\Ode\src\lcp.cpp"
+"C:\379\F4\Services\Common\Ode\src\mass.cpp"
+"C:\379\F4\Services\Common\Ode\src\mat.cpp"
+"C:\379\F4\Services\Common\Ode\src\matrix.cpp"
+"C:\379\F4\Services\Common\Ode\src\memory.cpp"
+"C:\379\F4\Services\Common\Ode\src\misc.cpp"
+"C:\379\F4\Services\Common\Ode\src\obstack.cpp"
+"C:\379\F4\Services\Common\Ode\src\ode.cpp"
+"C:\379\F4\Services\Common\Ode\src\odemath.cpp"
+"C:\379\F4\Services\Common\Ode\src\rotation.cpp"
+"C:\379\F4\Services\Common\Ode\src\space.cpp"
+"C:\379\F4\Services\Common\Ode\src\step.cpp"
+"C:\379\F4\Services\Common\Ode\src\testing.cpp"
+"C:\379\F4\Services\Common\Ode\src\timer.cpp"
+"C:\379\F4\Services\Physics\Src\Ode\contact_physics.cpp"
+"C:\379\F4\Services\Physics\Src\exports.cpp"
+"C:\379\F4\Services\Physics\Src\Ode\mass_helper.cpp"
+"C:\379\F4\Services\Physics\Src\Ode\physics.cpp"
+"C:\379\F4\Services\Physics\Src\Ode\rigid_body.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP3202.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP3203.TMP" with contents
+[
+core.lib math.lib memory.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_PhysicsODE/PhysicsODE.pdb" /machine:I386 /out:"../../Bin/PhysicsODE.dll" /implib:"../../Build/Release_PhysicsODE/PhysicsODE.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_PhysicsODE\array.obj
+\379\F4\Build\Release_PhysicsODE\error.obj
+\379\F4\Build\Release_PhysicsODE\fastdot.obj
+\379\F4\Build\Release_PhysicsODE\fastldlt.obj
+\379\F4\Build\Release_PhysicsODE\fastlsolve.obj
+\379\F4\Build\Release_PhysicsODE\fastltsolve.obj
+\379\F4\Build\Release_PhysicsODE\geom.obj
+\379\F4\Build\Release_PhysicsODE\joint.obj
+\379\F4\Build\Release_PhysicsODE\lcp.obj
+\379\F4\Build\Release_PhysicsODE\mass.obj
+\379\F4\Build\Release_PhysicsODE\mat.obj
+\379\F4\Build\Release_PhysicsODE\matrix.obj
+\379\F4\Build\Release_PhysicsODE\memory.obj
+\379\F4\Build\Release_PhysicsODE\misc.obj
+\379\F4\Build\Release_PhysicsODE\obstack.obj
+\379\F4\Build\Release_PhysicsODE\ode.obj
+\379\F4\Build\Release_PhysicsODE\odemath.obj
+\379\F4\Build\Release_PhysicsODE\rotation.obj
+\379\F4\Build\Release_PhysicsODE\space.obj
+\379\F4\Build\Release_PhysicsODE\step.obj
+\379\F4\Build\Release_PhysicsODE\testing.obj
+\379\F4\Build\Release_PhysicsODE\timer.obj
+\379\F4\Build\Release_PhysicsODE\contact_physics.obj
+\379\F4\Build\Release_PhysicsODE\exports.obj
+\379\F4\Build\Release_PhysicsODE\mass_helper.obj
+\379\F4\Build\Release_PhysicsODE\physics.obj
+\379\F4\Build\Release_PhysicsODE\rigid_body.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP3203.TMP"
+<h3>Output Window</h3>
+Compiling...
+array.cpp
+error.cpp
+fastdot.c
+fastldlt.c
+fastlsolve.c
+fastltsolve.c
+geom.cpp
+C:\379\F4\Services\Common\Ode\src\geom.cpp(431) : warning C4291: 'void *__cdecl dArrayBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\array.h(64) : see declaration of 'new'
+C:\379\F4\Services\Common\Ode\src\geom.cpp(441) : warning C4291: 'void *__cdecl dArrayBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\array.h(64) : see declaration of 'new'
+joint.cpp
+lcp.cpp
+mass.cpp
+mat.cpp
+matrix.cpp
+memory.cpp
+misc.cpp
+obstack.cpp
+ode.cpp
+C:\379\F4\Services\Common\Ode\src\ode.cpp(332) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+C:\379\F4\Services\Common\Ode\src\ode.cpp(874) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+odemath.cpp
+rotation.cpp
+space.cpp
+C:\379\F4\Services\Common\Ode\src\space.cpp(126) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+C:\379\F4\Services\Common\Ode\src\space.cpp(327) : warning C4291: 'void *__cdecl dBase::operator new(unsigned int)' : no matching operator delete found; memory will not be freed if initialization throws an exception
+        C:\379\F4\Services\Common\Ode\src\objects.h(47) : see declaration of 'new'
+step.cpp
+testing.cpp
+timer.cpp
+contact_physics.cpp
+exports.cpp
+mass_helper.cpp
+physics.cpp
+rigid_body.cpp
+Linking...
+   Creating library ../../Build/Release_PhysicsODE/PhysicsODE.lib and object ../../Build/Release_PhysicsODE/PhysicsODE.exp
+<h3>
+--------------------Configuration: Scene - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP3390.TMP" with contents
+[
+/nologo /MD /W3 /GX /Ot /Oi /Oy /Ob1 /I "../../Base" /I ".." /D "NDEBUG" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /Fp"../../Build/Release_Scene/Scene.pch" /YX /Fo"../../Build/Release_Scene/" /Fd"../../Build/Release_Scene/" /FD /c 
+"C:\379\F4\Services\Scene\Src\body.cpp"
+"C:\379\F4\Services\Scene\Src\collision_visitor.cpp"
+"C:\379\F4\Services\Scene\Src\entity.cpp"
+"C:\379\F4\Services\Scene\Src\event_visitor.cpp"
+"C:\379\F4\Services\Scene\Src\exports.cpp"
+"C:\379\F4\Services\Scene\Src\perspective_camera.cpp"
+"C:\379\F4\Services\Scene\Src\physics.cpp"
+"C:\379\F4\Services\Scene\Src\pose.cpp"
+"C:\379\F4\Services\Scene\Src\render_visitor.cpp"
+"C:\379\F4\Services\Scene\Src\simple_space.cpp"
+"C:\379\F4\Services\Scene\Src\surface.cpp"
+"C:\379\F4\Services\Scene\Src\update_visitor.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP3390.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP3391.TMP" with contents
+[
+core.lib math.lib memory.lib platform.lib /nologo /dll /incremental:no /pdb:"../../Build/Release_Scene/Scene.pdb" /machine:I386 /out:"../../Bin/Scene.dll" /implib:"../../Build/Release_Scene/Scene.lib" /libpath:"../../Base/Lib" 
+\379\F4\Build\Release_Scene\body.obj
+\379\F4\Build\Release_Scene\collision_visitor.obj
+\379\F4\Build\Release_Scene\entity.obj
+\379\F4\Build\Release_Scene\event_visitor.obj
+\379\F4\Build\Release_Scene\exports.obj
+\379\F4\Build\Release_Scene\perspective_camera.obj
+\379\F4\Build\Release_Scene\physics.obj
+\379\F4\Build\Release_Scene\pose.obj
+\379\F4\Build\Release_Scene\render_visitor.obj
+\379\F4\Build\Release_Scene\simple_space.obj
+\379\F4\Build\Release_Scene\surface.obj
+\379\F4\Build\Release_Scene\update_visitor.obj
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP3391.TMP"
+<h3>Output Window</h3>
+Compiling...
+body.cpp
+collision_visitor.cpp
+entity.cpp
+event_visitor.cpp
+exports.cpp
+perspective_camera.cpp
+physics.cpp
+pose.cpp
+render_visitor.cpp
+simple_space.cpp
+surface.cpp
+update_visitor.cpp
+Linking...
+   Creating library ../../Build/Release_Scene/Scene.lib and object ../../Build/Release_Scene/Scene.exp
+<h3>
+--------------------Configuration: Shell - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP40F5.TMP" with contents
+[
+/nologo /MD /W3 /GX /O2 /I ".." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /Fp"../../Build/Release_Shell/Shell.pch" /YX /Fo"../../Build/Release_Shell/" /Fd"../../Build/Release_Shell/" /FD /c 
+"C:\379\F4\Base\Shell\Src\shell.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP40F5.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP40F6.TMP" with contents
+[
+platform.lib user32.lib /nologo /entry:"mainCRTStartup" /subsystem:windows /incremental:no /pdb:"../../Build/Release_Shell/shell.pdb" /machine:I386 /out:"../../Bin/f4.exe" /libpath:"../Lib" 
+\379\F4\Build\Release_Shell\shell.obj
+\379\F4\Base\Lib\Platform.lib
+\379\F4\Base\Lib\core.lib
+\379\F4\Build\Release_Script\Script.lib
+\379\F4\Base\Lib\math.lib
+\379\F4\Build\Release_SystemSDL\SystemSDL.lib
+\379\F4\Build\Release_RenderGL\RenderGL.lib
+\379\F4\Build\Release_StdIO\StdIO.lib
+\379\F4\Build\Release_IO\IO.lib
+\379\F4\Build\Release_ColliderODE\ColliderODE.lib
+\379\F4\Build\Release_Text\Text.lib
+\379\F4\Build\Release_StdLib\StdLib.lib
+\379\F4\Build\Release_PhysicsODE\PhysicsODE.lib
+\379\F4\Build\Release_Scene\Scene.lib
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP40F6.TMP"
+<h3>Output Window</h3>
+Compiling...
+shell.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+f4.exe - 0 error(s), 12 warning(s)
+</pre>
+</body>
+</html>

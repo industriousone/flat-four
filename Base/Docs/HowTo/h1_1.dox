@@ -1,0 +1,142 @@
+/**
+@page H1_1 H1.1: Create a skeleton application in Lua
+
+I'll start with the code, then explain it below.
+
+@code
+local App = Service(Core.EventListener)
+
+function App:initialize()
+
+	-- initialize your application here
+	system:setWindowTitle("My Application")
+
+end
+
+function App:onTimeEvent(event)
+
+	-- update your scene here
+
+	-- render your scene here
+	render:start()
+
+	render:finish()
+	system:swapBuffers()
+
+end
+
+function App:onKeyEvent(event)
+
+	if (event.pressed and event.code == event.ESCAPE) then
+		core:quit()
+	end
+
+end
+
+io      = IO.IOService()
+system  = System.SystemService()
+render  = Render.RenderService()
+collide = Collider.CollisionService()
+physics = Physics.PhysicsService()
+
+StdIO.Register()
+
+core:addEventListener(App())
+@endcode
+
+
+From the top:
+
+@code
+local App = Service(Core.EventListener)
+@endcode
+
+	Nearly everything in F4 is a service, and applications are no exception. This 
+	statement creates a new service interface, based on "Core.EventListener" to
+	represent your new application. An EventListener is able to receive and respond
+	to messages from the main event loop.
+
+
+@code
+function App:initialize()
+
+	-- initialize your application here
+	system:setWindowTitle("My Application")
+
+end
+@endcode
+
+	@c initialize is a special function that is called whenever a new instance of a
+	service is created. It gives the instance a chance to initialize itself before
+	it is used. In this case, you will want to set up your application here.
+
+
+@code
+function App:onTimeEvent(event)
+
+	-- update your scene here
+
+	-- render your scene here
+	render:start()
+
+	render:finish()
+	system:swapBuffers()
+
+end
+@endcode 
+
+	A TimeEvent is sent to your application whenever there are no other events
+	to be processed. This is where you will want to update the state of your
+	game and render a new frame of animation.
+
+
+@code
+function App:onKeyEvent(event)
+
+	if (event.pressed and event.code == event.ESCAPE) then
+		core:quit()
+	end
+
+end
+@endcode
+
+	A KeyEvent is just one kind of user input event that your application can receive:
+	ClickEvent, MotionEvent, AxisEvent, and ButtonEvent are also possible. Or, you may
+	find it more useful to map these low-level input events to higher-level game events 
+	using the ActionMapper, located in the StdLib package. This sample KeyEvent handler
+	waits for the user to press the [Esc] key, then quits the application.
+
+
+@code
+io      = IO.IOService()
+system  = System.SystemService()
+render  = Render.RenderService()
+collide = Collider.CollisionService()
+physics = Physics.PhysicsService()
+@endcode
+
+	These statements start up the F4 engine subsystems and assigns them to global
+	script variables for quick access later. You only need to start the subsystems
+	which you actually intend to use in your application.
+
+
+@code
+StdIO.Register()
+@endcode
+
+	The StdIO package contains reader/writers for common file formats. This statement
+	registers each of the recognized file extensions with the IO service, so it will
+	know what to do with a command like <CODE>io:fromFile("myimage.png")</CODE>, for
+	example.
+
+
+@code
+core:addEventListener(App())
+@endcode
+
+	There are actually two things going on here. First, the call to <CODE>App()</CODE>
+	will create a new instance of the application service and call it's @c initialize
+	method. Then, it will register this new instance as an active EventListener. The
+	application will now start receiving system events.
+
+*/

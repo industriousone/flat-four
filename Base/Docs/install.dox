@@ -1,0 +1,120 @@
+/**
+@page install Installation
+
+
+@subsection install_source Getting the Latest Source Code
+
+	The latest version of the F4 source code should be available at the 379
+	website: http://www.379.com/f4/. 
+
+	<B>CVS</B><BR>
+	The latest source code is available from our
+	<A href="http://www.sourceforge.net/">SourceForge</A>
+	CVS repository, located at http://www.sourceforge.net/cvs/?group_id=33030
+
+
+@subsection install_libraries Additional Libraries
+
+	Some of the standard F4 services requires additional third-party libraries. Wherever
+	possible, these libraries are dynamically loaded and bound at runtime and do not 
+	need to be present to build the engine. Below is a list of the libraries required 
+	by the standard services:
+
+	- <B>OpenGL</B> (http://www.opengl.org/)<BR>
+	  Required by the RenderGL package to draw 2D and 3D graphics. This library should
+	  already be present on most modern systems.
+
+	- <B>SDL</B> (http://www.libsdl.org/)<BR>
+	  Required by the SystemSDL package to manage the display window, timers, and input
+	  devices. 
+
+	<B>Installing Third-Party Libraries</B><BR>
+	All third-party software must be build as shared libraries (so they can be dynamically
+	loaded at runtime). They may be located either on the system library search path, or 
+	placed in the application directory (@c F4/Bin by default).
+
+	<B>Distributing Third-Party Libraries</B><BR>
+	All of the third-party libraries are subject to the licenses chosen by their authors.
+	However, all of the libraries chosen so far may be distributed without restriction in 
+	their shared library form. The easiest way to install the libraries on an end-user's
+	PC is to place them in the same directory as the application executable. 
+
+	In addition to the libraries, <A href="http://www.doxygen.org/">Doxygen</A> is
+	required if you wish to generate the documentation files. However, these files are
+	also available online.
+
+
+@subsection install_build Building the Engine
+
+	<B>Win32/MSVC</B><BR>
+	Open @c F4/Build/F4.dsw and build.
+	<P>
+
+	<B>GNU C++</B><BR>
+	<CODE>'cd F4/Build; make'</CODE>
+
+	The make scripts are not yet complete. In particular there is no
+	dependency checking so if you start editing the header files the
+	changes may not get picked up. The scripts also assume that SDL
+	headers and libraries will be located in the system directories
+	(/usr/include, /usr/lib), which is where the RPM installs will
+	place them. 
+
+
+@subsection install_test Testing the Engine
+
+	It is easiest to test the engine from the command line:
+
+	<B>Win32</B><BR>
+	@code
+	cd F4\Samples
+	..\Bin\f4 boxes.lua
+	@endcode
+
+	<B>Linux</B><BR>
+	@code
+	cd F4/Samples
+	../Bin/f4 boxes.lua
+	@endcode
+
+	Press [Esc] to exit the demos. The current list of sample scripts:
+
+	<TABLE>
+	<TR><TD><B>Sample</B></TD><TD><B>Script</B></TD><TD><B>Description</B></TD></TR>
+	<TR>
+		<TD>Boxes</TD>
+		<TD>boxes.lua</TD>
+		<TD>
+			A falling stack of boxes, demonstrating F4's rigid-body dynamics
+			and collison handling.
+		</TD>
+	</TR>
+	<TR>
+		<TD>Object Viewer</TD>
+		<TD>objviewer.lua</TD>
+		<TD>
+			A trackball-style object viewer. Click and drag with the mouse to
+			rotate the object.
+		</TD>
+	</TR>
+	<TR>
+		<TD>NinjaFork</TD>
+		<TD>fork.lua</TD>
+		<TD>
+			A 2D shoot-em-up. Use the keyboard (arrow keys and spacebar) or a
+			game controller to play. And if the game looks like it was designed
+			by a nine year old...well, it was ;)
+		</TD>
+	</TR>
+	<TR>
+		<TD>Font Factory</TD>
+		<TD>fontfactory.lua</TD>
+		<TD>
+			Demostrates how to create a new texture font and write it to the
+			disk. Non-Win32 users will need to edit the script to point to a
+			TrueType or Type1 font located somewhere on their system.
+		</TD>
+	</TR>  
+	</TABLE>
+		
+*/
